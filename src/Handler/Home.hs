@@ -36,26 +36,10 @@ getHomeR = defaultLayout $ do
         <div .container-fluid>
           <div .row-fluid>
             <h1>Welcome to the web service
-        
-          <div .row-fluid>
-            <div .span6>
-                <h2>Fibs
-                <p>
-                    Fib number
-                    <input #fibinput type=number value=4>
-                    is
-                    <span #fiboutput>
-                    
-            <div .span6>
-            
-                <h2>Markdown
-                <textarea #markdowninput>
-                    ## Welcome
-                    
-                    Welcome to the Markdown demo. __Markup__ should work *correctly*.
-                <div .control-group>
-                    <button #updatemarkdown .btn .btn-primary>Update markdown output
-                <div #markdownoutput>
+            <h2>Testing to make sure we're making progress
+            <button #host>Host
+            <button #find>Find
+                
     |]
 
     -- Similar to Hamlet, Yesod has Lucius for CSS, and Julius for Javascript.
@@ -65,5 +49,14 @@ getHomeR = defaultLayout $ do
         }
     |]
     toWidget [julius|
+        $(function() {
+            $("#host").click(function(){
+                alert("Taking you to /host");
+            });
+
+            $("#find").click(function(){
+                alert("Taking you to /find");
+            })
+        });
         // Logic to come later
     |]
