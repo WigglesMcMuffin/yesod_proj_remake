@@ -39,7 +39,6 @@ getHomeR = defaultLayout $ do
             <h2>Testing to make sure we're making progress
             <button #host>Host
             <button #find>Find
-                
     |]
 
     -- Similar to Hamlet, Yesod has Lucius for CSS, and Julius for Javascript.

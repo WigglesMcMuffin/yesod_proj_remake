@@ -2,8 +2,11 @@ module Handler.Find where
 
 import Import
 
-fibs :: [Int]
-fibs = 1 : 1 : zipWith (+) fibs (tail fibs)
-
 getFindR :: Handler Value
-getFindR = return $ object ["value" .= (fibs !! 2)]
+getFindR = return $ object ["value" .= (2 :: Int) ]
+
+--postFindR :: Handler Value
+--postFindR = return $ sendResponse ()
+
+postFindR :: Handler Value
+postFindR = return $ object ["value" .= ()]
